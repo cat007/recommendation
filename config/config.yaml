@@ -1,0 +1,33 @@
+appName: first-project
+
+databaseConfiguration:
+  driverClass: com.mysql.jdbc.Driver
+  user: root
+  password:
+  url: jdbc:mysql://localhost:3306/test
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.MySQLDialect
+    hibernate.generate_statistics: false
+    hibernate.session.events.log: false
+    hibernate.show_sql: false
+    hibernate.format_sql: true
+  autoCommitByDefault: false
+  maxWaitForConnection: 10s
+  validationQuery: "/* MyApplication Health Check */ SELECT 1"
+  initialSize: 8
+  minSize: 8
+  maxSize: 100
+  checkConnectionWhileIdle: false
+  minIdleTime: 5 minute
+
+server:
+  type: default
+  minThreads: 500
+  maxThreads: 1024
+  applicationConnectors:
+    - type: http
+      port: 9080
+  adminConnectors:
+    - type: http
+      port: 9081
