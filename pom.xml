@@ -57,10 +57,10 @@
           <groupId>com.google.inject.extensions</groupId>
           <artifactId>*</artifactId>
         </exclusion>
-        <exclusion>
-          <groupId>org.reflections</groupId>
-          <artifactId>reflections</artifactId>
-        </exclusion>
+        <!--<exclusion>-->
+          <!--<groupId>org.reflections</groupId>-->
+          <!--<artifactId>reflections</artifactId>-->
+        <!--</exclusion>-->
       </exclusions>
     </dependency>
     <dependency>

@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 import io.dropwizard.Configuration;
 import io.dropwizard.db.DataSourceFactory;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * Created by naveen.kj on 07/03/18.
@@ -17,6 +18,7 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = false)
+@EqualsAndHashCode(callSuper = false)
 public class RecoConfiguration extends Configuration {
     @NotEmpty
     private String appName;

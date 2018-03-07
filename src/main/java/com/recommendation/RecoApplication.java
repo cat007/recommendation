@@ -27,7 +27,7 @@ public class RecoApplication extends Application<RecoConfiguration> {
             new HibernateBundle<RecoConfiguration>(UserData.class) {
         @Override
         public DataSourceFactory getDataSourceFactory(RecoConfiguration recoConfiguration) {
-            return null;
+            return recoConfiguration.getDatabaseConfiguration();
         }
 
         @Override
